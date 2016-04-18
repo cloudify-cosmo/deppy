@@ -1,0 +1,18 @@
+
+Package:  cloudify-plugins-common
+
+    Package:  bottle==0.12.7
+
+    Package:  networkx==1.8.1
+
+    Package:  cloudify-rest-client==3.3.1
+
+        Package:  requests==2.7.0
+
+    Package:  proxy-tools==0.1.0
+
+    Package:  jinja2==2.7.2
+
+        Package:  markupsafe
+
+    Package:  pika==0.9.14

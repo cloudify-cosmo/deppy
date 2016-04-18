@@ -1,0 +1,37 @@
+
+Package:  cloudify-plugins-common
+home_page:  UNKNOWN
+license:  LICENSE
+
+    Package:  bottle==0.12.7
+    home_page:  http://bottlepy.org/
+    license:  MIT
+
+    Package:  networkx==1.8.1
+    home_page:  http://networkx.github.io/
+    license:  BSD
+
+    Package:  cloudify-rest-client==3.3.1
+    home_page:  UNKNOWN
+    license:  LICENSE
+    summary:  Cloudify REST client
+
+        Package:  requests==2.7.0
+        home_page:  http://python-requests.org
+        license:  Apache 2.0
+        summary:  Python HTTP for Humans.
+
+    Package:  proxy-tools==0.1.0
+    home_page:  Unknown
+    summary:  Unknown
+
+    Package:  jinja2==2.7.2
+    home_page:  http://jinja.pocoo.org/
+    license:  BSD
+
+        Package:  markupsafe
+        license:  BSD
+        summary:  Implements a XML/HTML/XHTML Markup safe string for Python
+
+    Package:  pika==0.9.14
+    summary:  Pika Python AMQP Client Library

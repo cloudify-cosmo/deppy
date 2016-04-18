@@ -1,0 +1,12 @@
+
+In module:     cloudify-plugins-common
+     bottle==0.12.7  -->  ['0.12.9', '0.12.8']
+        LICENSE:  MIT
+     cloudify-rest-client==3.3.1  -->  ['3.4a3', '3.4a2', '3.4a1', '3.3a4', '3.3a5', '3.3a6', '3.3a7', '3.3a1', '3.3a2', '3.3rc1']
+        LICENSE:  LICENSE
+     jinja2==2.7.2  -->  ['2.8', '2.7.3']
+        LICENSE:  BSD
+     networkx==1.8.1  -->  ['1.9', '1.10rc2', '1.11rc1', '1.11rc2', '1.10', '1.11', '1.9rc1', '1.9.1', '1.8rc1']
+        LICENSE:  BSD
+     pika==0.9.14  -->  ['0.10.0', '0.10.0b1', '0.10.0b2']
+        LICENSE:  BSD

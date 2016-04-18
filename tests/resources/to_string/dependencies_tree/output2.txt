@@ -1,0 +1,54 @@
+
+Package:  cloudify-plugins-common
+home_page:  UNKNOWN
+license:  LICENSE
+summary:  Contains necessary decorators and utility methods for writing Cloudify plugins
+versions:  [u'3.4a3', u'3.4a2', u'3.4a1', u'3.2a1', u'3.2a8', u'3.2', u'3.3', u'3.0', u'3.1', u'3.3a4', u'3.3a5', u'3.2a3', u'3.2a2', u'3.2a5', u'3.2a4', u'3.2a7', u'3.2a6', u'3.3a7', u'3.3rc1', u'3.3a1', u'3.3a2', u'3.3a6', u'3.2rc1', u'3.1rc2', u'3.3.1', u'3.2.1']
+
+    Package:  bottle==0.12.7
+    home_page:  http://bottlepy.org/
+    license:  MIT
+    summary:  Fast and simple WSGI-framework for small web-applications.
+    versions:  [u'0.6.0', u'0.4.10', u'0.4.13', u'0.6.6', u'0.4.12', u'0.6.5', u'0.9.4', u'0.6.4', u'0.4.14', u'0.10.1', u'0.4.9', u'0.10.3', u'0.10.2', u'0.10.5', u'0.10.4', u'0.10.7', u'0.10.6', u'0.11.4', u'0.10.8', u'0.11.6', u'0.11.7', u'0.11.1', u'0.11.2', u'0.11.3', u'0.12.3', u'0.12.2', u'0.12.1', u'0.12.7', u'0.12.6', u'0.12.5', u'0.12.4', u'0.5.4', u'0.5.8', u'0.12.9', u'0.12.8', u'0.4.4', u'0.4.7', u'0.5.3', u'0.4.11', u'0.9.1', u'0.9.2', u'0.9.3', u'0.10.11', u'0.10.10', u'0.9.6', u'0.10.12', u'0.9.8', u'0.8.4', u'0.8.1', u'0.8.3', u'0.8.2', u'0.4.3', u'0.9.5', u'0.8.5', u'0.5.7', u'0.4.8', u'0.9.7', u'0.6.2', u'0.10.9', u'0.5.6', u'0.11.5', u'0.6.3', u'0.4.6', u'0.6.1']
+
+    Package:  networkx==1.8.1
+    home_page:  http://networkx.github.io/
+    license:  BSD
+    summary:  Python package for creating and manipulating graphs and networks
+    versions:  [u'1.4', u'1.5', u'1.6', u'1.7', u'1.0', u'1.1', u'1.2', u'1.3', u'1.2rc1', u'1.8', u'1.9', u'0.34', u'0.35.1', u'1.0.1', u'1.11rc1', u'1.11rc2', u'0.28', u'0.29', u'1.10', u'1.11', u'0.24', u'0.25', u'0.26', u'0.27', u'0.23', u'1.0rc1', u'1.9rc1', u'1.9.1', u'1.3rc1', u'1.8.1', u'1.5rc1', u'1.8rc1', u'0.37', u'1.4rc1', u'1.10rc2', u'0.36', u'0.35', u'1.6rc1', u'0.33', u'0.32', u'0.31', u'0.30', u'1.7rc1', u'0.99']
+
+    Package:  cloudify-rest-client==3.3.1
+    home_page:  UNKNOWN
+    license:  LICENSE
+    summary:  Cloudify REST client
+    versions:  [u'3.4a3', u'3.4a2', u'3.4a1', u'3.2a1', u'3.2a8', u'3.2', u'3.3', u'3.0', u'3.1', u'3.3a4', u'3.3a5', u'3.2a3', u'3.2a2', u'3.2a5', u'3.2a4', u'3.2a7', u'3.2a6', u'3.3a7', u'3.3rc1', u'3.3a1', u'3.3a2', u'3.3a6', u'3.2rc1', u'3.1rc2', u'3.3.1', u'3.2.1']
+
+        Package:  requests==2.7.0
+        home_page:  http://python-requests.org
+        license:  Apache 2.0
+        summary:  Python HTTP for Humans.
+        versions:  [u'1.0.4', u'1.0.0', u'1.0.1', u'1.0.2', u'1.0.3', u'0.3.2', u'0.3.3', u'0.3.0', u'0.3.1', u'0.3.4', u'0.12.01', u'2.8.1', u'2.8.0', u'2.2.0', u'2.9.2', u'2.9.0', u'2.9.1', u'2.0.1', u'2.0.0', u'0.6.6', u'2.2.1', u'0.6.5', u'0.6.3', u'0.6.2', u'0.6.1', u'0.6.0', u'0.11.1', u'0.11.2', u'0.6.4', u'0.13.8', u'0.13.9', u'0.13.6', u'0.13.7', u'0.13.4', u'0.13.5', u'0.13.2', u'0.13.3', u'0.13.0', u'0.13.1', u'0.8.9', u'0.8.8', u'0.14.2', u'0.8.5', u'0.8.4', u'0.8.7', u'0.8.6', u'0.8.1', u'0.8.0', u'0.8.3', u'0.8.2', u'0.4.1', u'0.4.0', u'2.4.3', u'2.4.2', u'2.4.1', u'2.4.0', u'2.6.1', u'2.6.0', u'2.6.2', u'1.1.0', u'0.2.4', u'0.2.3', u'0.2.2', u'0.2.1', u'0.2.0', u'0.14.1', u'2.1.0', u'0.14.0', u'0.10.1', u'0.10.0', u'0.10.3', u'0.10.2', u'0.0.1', u'0.10.4', u'0.10.7', u'0.10.6', u'0.7.6', u'0.10.8', u'0.7.4', u'0.7.5', u'0.7.2', u'0.7.3', u'0.7.0', u'0.7.1', u'0.12.1', u'0.12.0', u'0.5.0', u'0.5.1', u'0.9.0', u'0.9.1', u'0.9.2', u'0.9.3', u'2.3.0', u'1.2.2', u'1.2.3', u'1.2.0', u'1.2.1', u'2.5.2', u'2.5.3', u'2.5.0', u'2.5.1', u'2.10.0', u'2.7.0']
+
+    Package:  proxy-tools==0.1.0
+    home_page:  Unknown
+    license:  Unknown
+    summary:  Unknown
+    versions:  []
+
+    Package:  jinja2==2.7.2
+    home_page:  http://jinja.pocoo.org/
+    license:  BSD
+    summary:  A small but fast and easy to use stand-alone template engine written in pure python.
+    versions:  [u'2.5.4', u'2.0rc1', u'2.8', u'2.2.1', u'2.3', u'2.2', u'2.1', u'2.1.1', u'2.7', u'2.6', u'2.5', u'2.4', u'2.0', u'2.3.1', u'2.4.1', u'2.5.5', u'2.5.2', u'2.5.3', u'2.5.1', u'2.7.1', u'2.7.2', u'2.7.3']
+
+        Package:  markupsafe
+        home_page:  http://github.com/mitsuhiko/markupsafe
+        license:  BSD
+        summary:  Implements a XML/HTML/XHTML Markup safe string for Python
+        versions:  [u'0.9', u'0.9.1', u'0.9.2', u'0.9.3', u'0.20', u'0.21', u'0.22', u'0.23', u'0.15', u'0.14', u'0.17', u'0.16', u'0.11', u'0.13', u'0.12', u'0.19', u'0.18']
+
+    Package:  pika==0.9.14
+    home_page:  https://pika.readthedocs.org
+    license:  BSD
+    summary:  Pika Python AMQP Client Library
+    versions:  [u'0.10.0', u'0.9.3', u'0.9.4', u'0.9.5', u'0.9.6', u'0.9.7', u'0.9.8', u'0.9.9', u'0.9.1a', u'0.5', u'0.9.2a', u'0.5.2', u'0.9.12', u'0.9.13', u'0.9.10', u'0.9.11', u'0.10.0b1', u'0.5.1', u'0.9.14', u'0.10.0b2']

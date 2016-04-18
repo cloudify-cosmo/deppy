@@ -1,0 +1,98 @@
+
+INSTALL_REQUIRES_ARG = 'install_requires'
+NAME_ARG = 'name'
+SETUP_MODULE_NAME = 'setup'
+PIPDEPTREE_JSON_CMD = 'pipdeptree -j'
+REQUIRED_VERSION_KEY = 'required_version'
+PYPI_URL = 'https://pypi.python.org/pypi/{0}/json'
+INFO_KEY = 'info'
+NAME_KEY = 'name'
+SUMMARY_KEY = 'summary'
+LICENSE_KEY = 'license'
+RELEASES_KEY = 'releases'
+HOMEPAGE_KEY = 'home_page'
+DEPENDENCIES_KEY = 'dependencies'
+VERSIONS_KEY = 'versions'
+PACKAGE_KEY = 'package'
+REQUIRE_KEY = 'require'
+NEW_VERS_KEY = 'new_versions_available'
+KEY_KEY = 'key'
+UNKNOWN = 'Unknown'
+UNKNOWN_LICENSE_STR = UNKNOWN
+SETUP_FILE_NAME = 'setup.py'
+REQUIREMENTS_FILE_NAME = 'requirements.txt'
+RESULTS_KEY = 'results'
+MODULES_KEY = 'modules'
+ILLEGITIMATE_LICENSES_KEY = 'illegitimate_licenses'
+ARGUMENTS_KEY = 'args'
+TAB_SIZE = 4
+TAB = ' ' * TAB_SIZE
+MAIN_DESCRIPTION = 'Manage dependencies in your projects'
+SEEKUP_DESCRIPTION = 'Find newer versions for project dependencies'
+SHOWPACK_DESCRIPTION = 'Show info about given package'
+LICENSES_DESCRIPTION = 'Show info about package licenses'
+SUBCOMMAND_STR = 'subcommand'
+SEEKUP_STR = 'seekup'
+SHOWPACK_STR = 'showpack'
+LICENSES_STR = 'licenses'
+INPUT_TYPE_ARG_STR = '-i'
+INPUT_PACKAGE_STR = 'package'
+INPUT_PATH_STR = 'path'
+INPUT_URL_STR = 'url'
+INPUT_TYPE_STR = 'input_type'
+DEFAULT_INPUT = INPUT_PACKAGE_STR
+INPUT_TYPE_HELP_STR = 'choose input type.  options:  ' \
+                      '{0} (URL for setup.py file),  ' \
+                      '{1} (path for project folder),  ' \
+                      '{2} (name of package already installed - default)'
+PYPI_JSON_STR = 'pypy_json'
+DEPTH_ARG_STR = '-dep'
+DEPTH_STR = 'depth'
+DEFAULT_DEPTH = -1
+DEPTH_HELP_STR = 'maximum depth for dependencies tree'
+VERSIONS_ARG_STR = '-ver'
+VERSIONS_STR = 'versions'
+VERSIONS_HELP_STR = 'get all versions available for the package'
+HOMEPAGE_ARG_STR = '-hom'
+HOMEPAGE_STR = 'homepage'
+HOMEPAGE_HELP_STR = 'get package homepage'
+SUMMARY_ARG_STR = '-sum'
+SUMMARY_STR = 'summary'
+SUMMARY_HELP_STR = 'get package summary'
+BY_MODULE_ARG_STR = '-m'
+BY_MODULE_STR = 'by_module'
+BY_MODULE_HELP_STR = 'sort results by module (default: by dependencies)'
+RETURN_DATA_ARG_STR = '-j'
+RETURN_DATA_STR = 'json'
+RETURN_DATA_HELP_STR = 'return results as json (default: print as string)'
+SHOW_LICENSE_ARG_STR = '-l'
+SHOW_LICENSE_STR = 'show_license'
+SHOW_LICENSE_HELP_STR = 'show license for package (if known).  ' \
+                        'if a list of legit licenses inserted, ' \
+                        'throw warning for illegitimate licenses found.'
+STORE_CONST_ACTION = 'store_const'
+REQUIREMENTS_ARG_STR = '-r'
+REQUIREMENTS_STR = 'requirements'
+REQUIREMENTS_DEFAULT = None
+REQUIREMENTS_HELP_STR = 'url of requirements.txt file. ' \
+                        'relevant only if input type is url'
+MAX_JOBS_ARG_STR = '-t'
+MAX_JOBS_STR = 'max_threads'
+MAX_JOBS_DEFAULT = None
+MAX_JOBS_HELP_STR = 'limit the number of threads (default: unlimited)'
+INPUT_STR = 'input'
+INPUT_METAVAR_STR = 'INPUT'
+INPUT_HELP_STR = 'package'
+SHOW_PACKAGE_INPUT_HELP_STR = 'package name'
+ERROR_MESSAGE_ILLEGAL_SOURCE = 'Illegal source chosen. Legit sources are: {0}'
+ERROR_MESSAGE_ILLEGAL_INPUT_TYPE = \
+    'Illegal input type chosen.  Legit input types are: {0}'
+ERROR_MESSAGE_NO_SETUP = 'No {0} files found in the given path'.format(
+    SETUP_FILE_NAME)
+ERROR_MESSAGE_NO_PACKAGE_INSTALLED = 'No package found with the name {0}'
+ERROR_MESSAGE_NO_DEPENDENCIES = 'No dependencies found in project'
+ERROR_MESSAGE_NO_VERSIONS = 'No versions found online'
+ERROR_MESSAGE_BUILDING_DEPTREE = 'Error while building dependencies tree'
+ERROR_MESSAGE_URL = 'Error while getting dependencies from url'
+ERROR_MESSAGE_PYPI_JSON = 'Error while getting json from pypi'
+ERROR_MESSAGE_NO_INPUT = 'No input inserted! Use kwarg {0}'.format(INPUT_STR)

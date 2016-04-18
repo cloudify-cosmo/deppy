@@ -1,0 +1,82 @@
+{
+    "bottle": {
+        "home_page": "http://bottlepy.org/",
+        "dependencies": [],
+        "license": "MIT"
+    },
+    "proxy-tools": {
+        "home_page": "Unknown",
+        "dependencies": [],
+        "summary": "Unknown"
+    },
+    "markupsafe": {
+        "dependencies": [],
+        "summary": "Implements a XML/HTML/XHTML Markup safe string for Python",
+        "license": "BSD"
+    },
+    "jinja2": {
+        "home_page": "http://jinja.pocoo.org/",
+        "dependencies": [
+            {
+                "require": "",
+                "package": "markupsafe"
+            }
+        ],
+        "license": "BSD"
+    },
+    "networkx": {
+        "home_page": "http://networkx.github.io/",
+        "dependencies": [],
+        "license": "BSD"
+    },
+    "cloudify-plugins-common": {
+        "home_page": "UNKNOWN",
+        "dependencies": [
+            {
+                "require": "==0.12.7",
+                "package": "bottle"
+            },
+            {
+                "require": "==1.8.1",
+                "package": "networkx"
+            },
+            {
+                "require": "==3.3.1",
+                "package": "cloudify-rest-client"
+            },
+            {
+                "require": "==0.1.0",
+                "package": "proxy-tools"
+            },
+            {
+                "require": "==2.7.2",
+                "package": "jinja2"
+            },
+            {
+                "require": "==0.9.14",
+                "package": "pika"
+            }
+        ],
+        "license": "LICENSE"
+    },
+    "requests": {
+        "home_page": "http://python-requests.org",
+        "summary": "Python HTTP for Humans.",
+        "license": "Apache 2.0"
+    },
+    "cloudify-rest-client": {
+        "home_page": "UNKNOWN",
+        "dependencies": [
+            {
+                "require": "==2.7.0",
+                "package": "requests"
+            }
+        ],
+        "summary": "Cloudify REST client",
+        "license": "LICENSE"
+    },
+    "pika": {
+        "dependencies": [],
+        "summary": "Pika Python AMQP Client Library"
+    }
+}
