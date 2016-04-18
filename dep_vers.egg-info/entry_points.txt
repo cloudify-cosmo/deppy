@@ -1,0 +1,3 @@
+[console_scripts]
+dep-master = dep_vers.dep_vers_project:main
+

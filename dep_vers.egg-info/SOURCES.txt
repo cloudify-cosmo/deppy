@@ -1,0 +1,14 @@
+dep_vers/__init__.py
+dep_vers/dep_vers_module.py
+dep_vers/dep_vers_project.py
+dep_vers/vers_getter.py
+dep_vers.egg-info/PKG-INFO
+dep_vers.egg-info/SOURCES.txt
+dep_vers.egg-info/dependency_links.txt
+dep_vers.egg-info/entry_points.txt
+dep_vers.egg-info/not-zip-safe
+dep_vers.egg-info/requires.txt
+dep_vers.egg-info/top_level.txt
+dep_vers_tests/__init__.py
+dep_vers_tests/helpers.py
+dep_vers_tests/vers_getter_tests.py

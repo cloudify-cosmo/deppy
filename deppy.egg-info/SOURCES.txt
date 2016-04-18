@@ -1,0 +1,14 @@
+dep_vers/__init__.py
+dep_vers/dep_vers_module.py
+dep_vers/dep_vers_project.py
+dep_vers/vers_getter.py
+dep_vers_tests/__init__.py
+dep_vers_tests/helpers.py
+dep_vers_tests/vers_getter_tests.py
+deppy.egg-info/PKG-INFO
+deppy.egg-info/SOURCES.txt
+deppy.egg-info/dependency_links.txt
+deppy.egg-info/entry_points.txt
+deppy.egg-info/not-zip-safe
+deppy.egg-info/requires.txt
+deppy.egg-info/top_level.txt

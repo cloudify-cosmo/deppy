@@ -1,0 +1,3 @@
+[console_scripts]
+deppy = dep_vers.dep_vers_project:main
+
