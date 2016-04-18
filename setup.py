@@ -4,6 +4,7 @@ from setuptools import setup
 install_requires = [
     'joblib==0.9.4',
     'requests==2.9.1',
+    'pipdeptree==0.6.0',
 ]
 
 setup(
@@ -11,7 +12,7 @@ setup(
         version='1.0',
         author='yariv',
         author_email='yariv@gigaspaces.com',
-        packages=['dep_vers', 'dep_vers_tests'],
+        packages=['dep_vers', 'tests'],
         description='Deppy is a dependencies management tool for '
                     'projects/packages.\n\n'
 

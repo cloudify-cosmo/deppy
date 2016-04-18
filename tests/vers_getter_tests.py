@@ -1,19 +1,27 @@
 
-import unittest
+import testtools
 
 from dep_vers import vers_getter as tested_module
 from helpers import cmp_elements
+from mocks import mock_vers_getter
 
 
-class TestVersGetter(unittest.TestCase):
+DUMMY_PACKAGE_NAME = 'dummy_package_that_doesnt_exist_065591'
 
-    def generic_test(self, expected, *args):
+
+class TestVersGetter(testtools.TestCase):
+
+    def __init__(self, *args, **kwargs):
+        super(TestVersGetter, self).__init__(*args, **kwargs)
+        self.func = None
+
+    def _generic_test(self, expected, *args):
         self.assertTrue(cmp_elements(expected, self.func(*args)))
 
     def test_compare_loose_versions_old(self):
 
         self.func = func = tested_module.compare_loose_versions
-        t = self.generic_test
+        t = self._generic_test
 
         self.assertEqual(func('7', '7'), 0)
         self.assertEqual(func('7', '6'), 1)
@@ -191,7 +199,7 @@ class TestVersGetter(unittest.TestCase):
     def test_compare_loose_versions_new(self):
 
         self.func = tested_module.compare_loose_versions
-        t = self.generic_test
+        t = self._generic_test
 
         t(True, '1.2', '1.3', '<')
         t(False, '1.2', '1.3', '>')
@@ -217,7 +225,7 @@ class TestVersGetter(unittest.TestCase):
     def test_split_required_versions(self):
 
         self.func = tested_module.split_required_versions
-        t = self.generic_test
+        t = self._generic_test
 
         ver_str = '7.5'
         for op in tested_module.OPS:
@@ -227,7 +235,7 @@ class TestVersGetter(unittest.TestCase):
     def test_filter_newer_versions(self):
 
         self.func = tested_module.filter_newer_versions
-        t = self.generic_test
+        t = self._generic_test
 
         t(['1', '2', '3'], ['1', '2', '3'], '')
         t(['1', '2', '3'], ['1', '2', '3'], '0')
@@ -259,7 +267,7 @@ class TestVersGetter(unittest.TestCase):
     def test_get_new_versions_available(self):
 
         self.func = tested_module.get_new_versions_available
-        t = self.generic_test
+        t = self._generic_test
 
         t([{tested_module.PACKAGE_KEY: 'a', tested_module.REQUIRE_KEY: '2', tested_module.NEW_VERS_KEY: ['3']}],
           {'a': ['2']},
@@ -306,11 +314,23 @@ class TestVersGetter(unittest.TestCase):
           {}
           )
 
+    def test_get_json_from_pypi(self):
+        self.func = tested_module.get_json_from_pypi
+        t = self._generic_test
+
+        t(None, DUMMY_PACKAGE_NAME)
+
+        package_name = 'pika'
+        res = self.func(package_name)
+        self.assertEqual(str(res[tested_module.INFO_KEY][tested_module.NAME_KEY]).lower(), package_name.lower())
+
     def test_get_versions_from_pypi(self):
 
         self.func = tested_module.get_versions_from_pypi
-        t = self.generic_test
-        t(('abx', [], tested_module.UNKNOWN_LICENSE_STR), 'abx')
+        t = self._generic_test
+
+        t((DUMMY_PACKAGE_NAME, [], tested_module.UNKNOWN_LICENSE_STR), DUMMY_PACKAGE_NAME)
+
         package_name = 'pika'
         res = self.func(package_name)
         self.assertEqual(res[0], package_name)
@@ -319,10 +339,39 @@ class TestVersGetter(unittest.TestCase):
             self.assertTrue(isinstance(item, str))
         self.assertEqual(res[2], 'BSD')
 
+        with mock_vers_getter.mock_get_json_from_pypi({}):
+            t((package_name, [], tested_module.UNKNOWN_LICENSE_STR), package_name)
+
+        with mock_vers_getter.mock_get_json_from_pypi({
+            tested_module.INFO_KEY: {
+                tested_module.INFO_KEY: package_name,
+                tested_module.LICENSE_KEY: 'lic'
+            },
+            tested_module.RELEASES_KEY: {'1.4': []}
+        }):
+            t((package_name, ['1.4'], 'lic'), package_name)
+
+        with mock_vers_getter.mock_get_json_from_pypi({
+            tested_module.INFO_KEY: {
+                tested_module.INFO_KEY: package_name,
+            },
+            tested_module.RELEASES_KEY: {}
+        }):
+            t((package_name, [], tested_module.UNKNOWN_LICENSE_STR), package_name)
+
+        with mock_vers_getter.mock_get_json_from_pypi({
+            tested_module.INFO_KEY: {
+                tested_module.INFO_KEY: package_name,
+                tested_module.LICENSE_KEY: tested_module.UNKNOWN_LICENSE_STR
+            },
+            tested_module.RELEASES_KEY: {'1.4': [], '3.7': None}
+        }):
+            t((package_name, ['1.4', '3.7'], tested_module.UNKNOWN_LICENSE_STR), package_name)
+
     def test_get_versions_from_pip(self):
         self.func = tested_module.get_versions_from_pip
-        t = self.generic_test
-        t(('abx', [], tested_module.UNKNOWN_LICENSE_STR), 'abx')
+        t = self._generic_test
+        t((DUMMY_PACKAGE_NAME, [], tested_module.UNKNOWN_LICENSE_STR), DUMMY_PACKAGE_NAME)
 
         package_name = 'pika'
         res = self.func(package_name)
@@ -331,7 +380,3 @@ class TestVersGetter(unittest.TestCase):
         for item in res[1]:
             self.assertTrue(isinstance(item, str))
         self.assertEqual(res[2], tested_module.UNKNOWN_LICENSE_STR)
-
-
-if __name__ == '__main__':
-    unittest.main()

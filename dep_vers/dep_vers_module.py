@@ -170,8 +170,7 @@ def build_dep_tree(package_name, rec=-1):
     try:
         p = subprocess.Popen(PIPDEPTREE_JSON_CMD, shell=True,
                              stdout=subprocess.PIPE, close_fds=True)
-        x = p.communicate()
-        dep_json = json.loads(x[0])
+        dep_json = json.loads(p.communicate()[0])
     except:
         return None
     return rec_build_dep_tree({}, dep_json, package_name, rec)

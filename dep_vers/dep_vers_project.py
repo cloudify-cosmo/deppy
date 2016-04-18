@@ -45,6 +45,11 @@ def find_files_in_path(name, path):
 
 
 def dep_tree_to_print(dep_tree, root, res='', curr_depth=0, req=''):
+    """
+    return the result (the dependencies tree) in a string format
+
+    """
+
     margin = TAB * curr_depth
     res += '{0}Package:  {1}\n'.format(margin, root + req)
     for item in dep_tree.get(root, {}):
