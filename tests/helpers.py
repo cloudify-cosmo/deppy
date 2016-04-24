@@ -17,10 +17,8 @@ def cmp_unordered_lists(list1, list2):
     if len(list1) != len(list2):
         return False
     for element in list1:
-        if not len([e for e in list2 if cmp_elements(e, element)]):
-            return False
-    for element in list2:
-        if not len([e for e in list1 if cmp_elements(e, element)]):
+        if not len([e for e in list2 if cmp_elements(e, element)]) == \
+                len([e for e in list1 if cmp_elements(e, element)]):
             return False
     return True
 

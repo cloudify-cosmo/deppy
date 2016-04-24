@@ -2,8 +2,8 @@
 from setuptools import setup
 
 install_requires = [
-    'joblib>0.9.4',
-    'requests',
+    'joblib==0.9.4',
+    'requests==2.9.1',
     'pipdeptree==0.6.0',
 ]
 
@@ -12,7 +12,7 @@ setup(
     version='1.0',
     author='yariv',
     author_email='yariv@gigaspaces.com',
-    packages=['dep_vers', 'tests'],
+    packages=['deppy', 'tests'],
     description='Deppy is a dependencies management tool for '
                 'projects/packages.\n\n'
 
@@ -26,7 +26,7 @@ setup(
     install_requires=install_requires,
     entry_points={
         'console_scripts': [
-            'deppy = dep_vers.dep_vers_project:main'
+            'deppy = deppy.deppy:main'
         ]
     }
 )

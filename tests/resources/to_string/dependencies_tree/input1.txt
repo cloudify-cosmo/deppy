@@ -1,0 +1,64 @@
+{
+    "markupsafe": {
+        "dependencies": []
+    }, 
+    "jinja2": {
+        "dependencies": [
+            {
+                "require": "", 
+                "package": "markupsafe"
+            }
+        ]
+    }, 
+    "networkx": {
+        "dependencies": []
+    }, 
+    "bottle": {
+        "dependencies": []
+    }, 
+    "cloudify-plugins-common": {
+        "dependencies": [
+            {
+                "require": "==0.12.7", 
+                "package": "bottle"
+            }, 
+            {
+                "require": "==1.8.1", 
+                "package": "networkx"
+            }, 
+            {
+                "require": "==3.3.1", 
+                "package": "cloudify-rest-client"
+            }, 
+            {
+                "require": "==0.1.0", 
+                "package": "proxy-tools"
+            }, 
+            {
+                "require": "==2.7.2", 
+                "package": "jinja2"
+            }, 
+            {
+                "require": "==0.9.14", 
+                "package": "pika"
+            }
+        ]
+    }, 
+    "proxy-tools": {
+        "dependencies": []
+    }, 
+    "requests": {
+        "dependencies": []
+    }, 
+    "cloudify-rest-client": {
+        "dependencies": [
+            {
+                "require": "==2.7.0", 
+                "package": "requests"
+            }
+        ]
+    }, 
+    "pika": {
+        "dependencies": []
+    }
+}
